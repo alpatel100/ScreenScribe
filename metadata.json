@@ -1,0 +1,7 @@
+{
+  "name": "ScreenScribe AI",
+  "description": "A web application that allows you to take a screenshot of your browser, a window, or your entire screen, and then uses Gemini to transcribe any text present in the image. The transcribed text can be easily copied or downloaded as a text file.",
+  "requestFramePermissions": [
+    "display-capture"
+  ]
+}
