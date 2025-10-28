@@ -1,3 +1,4 @@
+
 import React, { useState, useCallback, FC, useRef, useEffect } from 'react';
 import { transcribeImage } from './services/geminiService';
 import { Status } from './types';
@@ -431,7 +432,8 @@ const App: FC = () => {
                         </div>
                     ) : (
                         <div className="flex items-center gap-4">
-                          {isSessionActive && status !== Status.Reviewing && (
+                          {/* FIX: This condition was redundant. In this code branch, status is guaranteed not to be 'Reviewing', so the second part of the condition is always true and can be removed to fix the TypeScript error. */}
+                          {isSessionActive && (
                               <>
                               <button
                                   onClick={handleTakeSnapshot}
